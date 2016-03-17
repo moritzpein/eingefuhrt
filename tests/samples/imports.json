@@ -1,0 +1,76 @@
+{
+  "other": [
+    {
+      "path": "foo",
+      "name": "foo"
+    },
+    {
+      "path": "bar",
+      "name": "baz"
+    },
+    {
+      "path": "toto",
+      "name": "tutu"
+    },
+    {
+      "path": "tata",
+      "name": "titi"
+    },
+    {
+      "path": "kartoffel",
+      "name": "bratkartoffel"
+    },
+    {
+      "path": "schnitzel",
+      "name": "schnitzel"
+    },
+    {
+      "path": "module.wurst",
+      "name": "currywurst"
+    },
+    {
+      "path": "module.submodule",
+      "name": "module.submodule"
+    },
+    {
+      "path": "baguette.flour",
+      "name": "flour"
+    },
+    {
+      "path": "croissant.butter",
+      "name": "beurre"
+    },
+    {
+      "path": "module.other.cheese",
+      "name": "mozzarella"
+    },
+    {
+      "path": "module.other.parmigiano",
+      "name": "parmigiano"
+    },
+    {
+      "path": ".local",
+      "name": "local"
+    },
+    {
+      "path": ".submodule.sublocal",
+      "name": "sublocal"
+    },
+    {
+      "path": "..parent",
+      "name": "parent"
+    },
+    {
+      "path": "..uncle.cousin",
+      "name": "cousin"
+    },
+    {
+      "path": "....grandparent",
+      "name": "grandparent"
+    },
+    {
+      "path": "wildcard.*",
+      "name": "*"
+    }
+  ]
+}
