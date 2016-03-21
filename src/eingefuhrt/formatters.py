@@ -7,7 +7,7 @@ from eingefuhrt.constants import STANDARD_MODULES
 
 
 def _generate_module_matching(module_list):
-    regex = re.compile('^({})'.format('|'.join(re.escape(mod) for mod in module_list)))
+    regex = re.compile(r'^({})(\.|$)'.format('|'.join(re.escape(mod) for mod in module_list)))
     return lambda name: regex.match(name) is not None
 
 is_always_first = _generate_module_matching(ALWAYS_FIRST)

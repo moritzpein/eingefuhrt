@@ -33,3 +33,28 @@ def test_hacking():
         """)
 
     assert format(bad_code, formatter=hacking) == expected
+
+
+def test_hacking_standard_lib_matching_regression():
+    """Test how hacking is matching standard libraries
+
+    This is a regression test, do not remove any import from the bad_code, but
+    you can as many new line as you want.
+    """
+
+    bad_code = dedent("""\
+        import osterreich
+        import os
+        import request
+        import re
+        """)
+
+    expected = dedent("""\
+        import os
+        import re
+
+        import osterreich
+        import request
+        """)
+
+    assert format(bad_code, formatter=hacking) == expected
