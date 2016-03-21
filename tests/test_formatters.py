@@ -39,7 +39,7 @@ def test_hacking_standard_lib_matching_regression():
     """Test how hacking is matching standard libraries
 
     This is a regression test, do not remove any import from the bad_code, but
-    you can as many new line as you want.
+    you can add as many new line as you want.
     """
 
     bad_code = dedent("""\

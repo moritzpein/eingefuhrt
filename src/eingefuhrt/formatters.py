@@ -13,7 +13,7 @@ def _generate_module_matching(module_list):
 is_always_first = _generate_module_matching(ALWAYS_FIRST)
 is_standard_module = _generate_module_matching(STANDARD_MODULES)
 
-del _generate_module_matching  # People have a tendency to import thing they shouldn't
+del _generate_module_matching  # People have a tendency to import things they shouldn't
 
 
 def hacking_import_to_string(imp):
