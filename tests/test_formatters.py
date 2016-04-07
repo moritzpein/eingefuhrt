@@ -5,7 +5,7 @@ from eingefuhrt.formatters import hacking
 from eingefuhrt.parser import get_imports
 
 
-def format(code, formatter):
+def format_(code, formatter):
     return formatter(get_imports(ast.parse(code, filename='<test>')))
 
 
@@ -32,7 +32,7 @@ def test_hacking():
         from mymodule.submodule import foo
         """)
 
-    assert format(bad_code, formatter=hacking) == expected
+    assert format_(bad_code, formatter=hacking) == expected
 
 
 def test_hacking_standard_lib_matching_regression():
@@ -57,4 +57,4 @@ def test_hacking_standard_lib_matching_regression():
         import request
         """)
 
-    assert format(bad_code, formatter=hacking) == expected
+    assert format_(bad_code, formatter=hacking) == expected
