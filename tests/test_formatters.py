@@ -1,3 +1,4 @@
+import pytest
 import ast
 from textwrap import dedent
 
@@ -71,3 +72,18 @@ def test_hacking_support_python2():
         """)
 
     assert format_(code, formatter=hacking) == code
+
+
+@pytest.mark.xfail(reason="Comments are not parsed yet")
+def test_hacking_preserve_inline_comments():
+    bad_code = dedent("""\
+        import thirdparty # Third party library
+
+        import os""")
+
+    expected = dedent("""\
+        import os
+
+        import thirdparty # Third party library""")
+
+    assert format_(bad_code, formatter=hacking) == expected
