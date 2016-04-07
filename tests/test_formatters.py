@@ -58,3 +58,16 @@ def test_hacking_standard_lib_matching_regression():
         """)
 
     assert format_(bad_code, formatter=hacking) == expected
+
+
+def test_hacking_support_python2():
+    """Test support for python2 standard library"""
+    code = dedent("""\
+        import ConfigParser
+        import re
+        import StringIO
+
+        import thirdparty
+        """)
+
+    assert format_(code, formatter=hacking) == code
