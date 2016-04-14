@@ -2,7 +2,6 @@
 *.egg-info
 
 .cache
-.DS_Store
 .coverage
 .tox/
 
