@@ -3,4 +3,4 @@ branch = True
 
 [report]
 exclude_lines =
-  nocov
+    nocov
