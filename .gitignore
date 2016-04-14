@@ -2,7 +2,13 @@
 *.egg-info
 
 .cache
+.DS_Store
+.coverage
+.tox/
 
 /dist
 /.eggs
 /build
+
+htmlcov/
+test-results.xml
